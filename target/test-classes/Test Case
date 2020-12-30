@@ -1,0 +1,36 @@
+ctions and guidance telling me what programs I need to install on my PC to run the automation and also instructions on how to run the automation, and
+
+(c) A trial run demonstrating that BS provides screen recordings of each run and logs (information I can forward to my website developer).
+
+The process flow the script is to automate in BS is:
+
+i. Select Device and Browser from Excel sheet (attached)
+
+ii. load website home page: https://catevolution.com.au
+
+iii. scroll top to bottom and back to top of page (has to be slow enough to see whole page (estimate 5-10 seconds)
+
+iv. from menu select product page: https://catevolution.com.au/litter-robot-3-connect.html
+scroll top to bottom and back to top of page (5-10 seconds)
+
+v. select grey
+
+vii. select buy now
+
+viii. checkout, fill in delivery address (test information will be provided)
+
+ix. select payment method (credit card or debit card)
+
+x. select Google ads in How did you hear about us
+
+xi. select I have read and agree to the Terms and Conditions
+
+xii. confirm order (this will bring up payment method)
+
+xiii. At this point exit out of checkout (i.e. do not enter any payment details)
+
+xiv. End
+
+xv. Next device and browser combination
+
+Is this something you can do, and if so what is your expected budget.

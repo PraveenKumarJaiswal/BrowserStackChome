@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+    <test name="Google_Pixel_3">
+        <parameter name="deviceID" value="1"/>
+        <classes>
+            <class name="com.qa.tests.LoginTests"/>
+            <!--<class name="com.qa.tests.ProductTests"/>-->
+        </classes>
+    </test>
+<!--    <test name="iPhone_XS">
+        <parameter name="deviceID" value="2"/>
+        <classes>
+            <class name="com.qa.tests.LoginTests"/>
+            &lt;!&ndash;<class name="com.qa.tests.ProductTests"/>&ndash;&gt;
+        </classes>
+    </test>-->
+</suite> <!-- Suite -->
