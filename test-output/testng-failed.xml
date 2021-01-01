@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="5" name="Google_Pixel_3(failed)" parallel="tests">
-    <parameter name="deviceID" value="1"/>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.LoginTests">
+      <class name="com.qa.base.BrowserCat">
         <methods>
-          <include name="invalidUserName"/>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="invalidPassword"/>
-          <include name="successfulLogin"/>
+          <include name="buyProduct"/>
+          <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.tests.LoginTests -->
+      </class> <!-- com.qa.base.BrowserCat -->
     </classes>
-  </test> <!-- Google_Pixel_3(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

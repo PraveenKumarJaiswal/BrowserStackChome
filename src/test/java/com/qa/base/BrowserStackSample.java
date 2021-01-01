@@ -1,18 +1,25 @@
 package com.qa.base;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -22,14 +29,44 @@ public class BrowserStackSample {
 	static AndroidDriver<AndroidElement> driver;
 
 	public static void main(String[] args) throws Throwable {
-
+// 50/340 - menu
+//scroll using cordinated: 500/500 to 500/1800
+/*
+ * 
+ * Unknown mobile command "swipe". 
+ * Only shell,
+ * scrollBackTo,
+ * viewportScreenshot,
+ * deepLink,
+ * startLogsBroadcast,
+ * stopLogsBroadcast,
+ * acceptAlert,
+ * dismissAlert,
+ * batteryInfo,
+ * deviceInfo,
+ * changePermissions,
+ * getPermissions,
+ * performEditorAction,
+ * startScreenStreaming,
+ * stopScreenStreaming,
+ * getNotifications,
+ * listSms,
+ * type commands are supported. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+ * 
+ * */		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		caps.setCapability("browserstack.user", "kenmaccormick1");
 		caps.setCapability("browserstack.key", "kR58js3CZxgwgKHyxraB");
-		caps.setCapability("device", "Google Pixel 3");
-		caps.setCapability("os_version", "9.0");
+//		caps.setCapability("device", "Google Pixel 3");
+//		caps.setCapability("os_version", "9.0");
+
+	      // Specify device and os_version for testing
+	      caps.setCapability("device", "Samsung Galaxy Note 20");
+	      caps.setCapability("os_version", "10.0");
+	      
 		// caps.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
 		caps.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
 		caps.setCapability("project", "First Java Project");
@@ -40,28 +77,32 @@ public class BrowserStackSample {
 
 		
 		driver.navigate().to("https://catevolution.com.au/index.php?route=common/amp_home");
-
 		System.out.println("Browser is launched");
 		System.out.println("Title " + driver.getTitle());
 		Thread.sleep(1000);
-		
 		System.out.println("Url is launched");
 		Thread.sleep(3000);
 		System.out.println("Scroll started");
-
 		WebElement ele = driver.findElement(By.xpath("//*[contains(text(),'Copyright')]"));
 
+
+		
+
+
+		
 //		for(int i=0;i<12;i++) {
-//			js.executeScript("window.scrollBy(0,550)", "");
+//			JavascriptExecutor ja = (JavascriptExecutor) driver;
+//			ja.executeScript("window.scrollBy(0,550)", "");
 //			Thread.sleep(1000);
-//			System.out.println("Scrolled time:-"+i);
+//			System.out.println("Scrolled time: "+i);
 //		}
 //		
 //		
 //		for(int i=0;i<12;i++) {
-//			js.executeScript("window.scrollBy(0,-550)", "");
+//			JavascriptExecutor jb = (JavascriptExecutor) driver;
+//			jb.executeScript("window.scrollBy(0,-550)", "");
 //			Thread.sleep(1000);
-//			System.out.println("Scrolled time:-"+i);
+//			System.out.println("Scrolled time: -"+i);
 //		}
 
 		System.out.println("Scroll end");
@@ -77,6 +118,30 @@ public class BrowserStackSample {
 		subMenuLitterRobot.click();
 		System.out.println("We have clicked on Litter-Robot Connect sub menu");
 		
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+		
+		Thread.sleep(3000);
+		
+		
+		for(int i=0;i<8;i++) {
+			JavascriptExecutor jsea = (JavascriptExecutor) driver;
+			jsea.executeScript("window.scrollBy(0,250)", "");
+			Thread.sleep(1000);
+			System.out.println("Scrolled time: "+i);
+		}
+		System.out.println("Scrolling from top to bottom is completed");
+		
+		
+		for(int i=0;i<8;i++) {
+			JavascriptExecutor jseb = (JavascriptExecutor) driver;
+			jseb.executeScript("window.scrollBy(0,-550)", "");
+			Thread.sleep(1000);
+			System.out.println("Scrolled time: -"+i);
+		}
+		
+		System.out.println("Scrolling from bottom to top is complete");
+		
 		for(int i=0;i<2;i++) {
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("window.scrollBy(0,650)", "");
@@ -86,17 +151,9 @@ public class BrowserStackSample {
 		
 		Thread.sleep(3000);
 		Select selectColor =new Select(driver.findElement(By.id("input-option240")));
-		selectColor.selectByVisibleText("Bisque (SKU: LR3C-1000 ) ");
+		selectColor.selectByVisibleText("Grey (SKU: LR3C-1200 )");
 		
-//		for(int i=0;i<1;i++) {
-//			JavascriptExecutor jse = (JavascriptExecutor) driver;
-//			jse.executeScript("window.scrollBy(0,250)", "");
-//			Thread.sleep(1000);
-//			System.out.println("Scrolled time:-"+i);
-//		}
-		
-		driver.navigate().refresh();
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		
 		System.out.println("clicking on buy now button");
 		WebElement buyNowBtn = driver.findElement(By.xpath("//input[@value='Buy Now']"));
@@ -201,5 +258,5 @@ public class BrowserStackSample {
 		driver.quit();
 
 	}
-
+	
 }
