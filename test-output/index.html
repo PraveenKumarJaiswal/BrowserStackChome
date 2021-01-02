@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\prave\AppData\Local\Temp\testng-eclipse-479279917\testng-customsuite.xml</span>
+                    <span>C:\Users\prave\AppData\Local\Temp\testng-eclipse-1735839572\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.base.BrowserCat" hash-for-method="buyProduct">buyProduct</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.base.AndroidEmuCat" hash-for-method="buyProduct">buyProduct</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,7 +120,7 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.qa.base.BrowserCat</span>
+              <span class="class-name">com.qa.base.AndroidEmuCat</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,26 +128,21 @@
                   <a name="buyProduct">
                   </a> <!-- buyProduct -->
                   <span class="method-name">buyProduct</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[contains(text(),&apos;Checkout&apos;)])[2]&quot;}
-  (Session info: chrome=86.0.4240.198)
-  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Linux 4.1.13-101.fc21.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: chrome=87.0.4280.101)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-94SR29E&apos;, ip: &apos;192.168.0.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, automationName: UiAutomator2, browser: android, browserName: chrome, browserstack.appium_version: 1.17.0, browserstack.is_hub_canary: false, buildName: Java Android, chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., test-type, --proxy-server=http://103.2..., --disable-features=TranslateUI], w3c: false}, chromedriverPort: 18082, databaseEnabled: false, detected_language: selenium/3.141.59 (java win..., device: Samsung Galaxy Note 20, deviceApiLevel: 29, deviceManufacturer: samsung, deviceModel: SM-N980F, deviceName: RZ8N81146PT, deviceOrientation: portrait, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: RZ8N81146PT, enablePerformanceLogging: false, javascriptEnabled: true, locationContextEnabled: false, loggingPrefs: org.openqa.selenium.logging..., mobile: {browser: mobile, version: Samsung Galaxy Note 20-10.0}, networkConnectionEnabled: true, newCommandTimeout: 0, new_bucketing: true, orientation: PORTRAIT, orig_os: android, osVersion: 10.0, os_version: 10.0, pixelRatio: 2.8125, platform: ANDROID, platformName: Android, platformVersion: 10, projectName: First Java Project, realMobile: true, sessionName: first_test, statBarHeight: 92, systemPort: 8202, takesScreenshot: true, udid: RZ8N81146PT, version: , viewportRect: {height: 2081, left: 0, top: 92, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 00c5e98067f3e22b0946c04e2435b1ac193c82ad
-*** Element info: {Using=xpath, value=(//a[contains(text(),&apos;Checkout&apos;)])[2]}
+Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: D:\appium_browserstack-mast..., databaseEnabled: false, desired: {automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: D:\appium_browserstack-mast..., deviceName: emulator-5554, platformName: android, platformVersion: 8.0.0}, deviceApiLevel: 26, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2220, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: b34d36ff-e88d-437b-8b80-288678261cde
+*** Element info: {Using=id, value=input-option240}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
@@ -158,16 +153,16 @@ Session ID: 00c5e98067f3e22b0946c04e2435b1ac193c82ad
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.qa.base.BrowserCat.buyProduct(BrowserCat.java:149)
+	at com.qa.base.AndroidEmuCat.buyProduct(AndroidEmuCat.java:106)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -202,7 +197,7 @@ Session ID: 00c5e98067f3e22b0946c04e2435b1ac193c82ad
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\prave\AppData\Local\Temp\testng-eclipse-479279917\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\prave\AppData\Local\Temp\testng-eclipse-1735839572\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,7 +206,7 @@ Session ID: 00c5e98067f3e22b0946c04e2435b1ac193c82ad
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.qa.base.BrowserCat&quot;/&gt;
+      &lt;class name=&quot;com.qa.base.AndroidEmuCat&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -254,8 +249,8 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'buyProduct')
-data.setCell(0, 2, 'com.qa.base.BrowserCat')
-data.setCell(0, 3, 79476);
+data.setCell(0, 2, 'com.qa.base.AndroidEmuCat')
+data.setCell(0, 3, 71785);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -286,7 +281,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.base.BrowserCat</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.base.AndroidEmuCat</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
@@ -295,11 +290,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">buyProduct</span>
-                <span class="method-start">15933 ms</span>
+                <span class="method-start">26885 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">95434 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">98680 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,53 +1,44 @@
+
 package com.qa.base;
 
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.touch.offset.PointOption;
 
-public class BrowserCat {
-	AndroidDriver<AndroidElement> driver;
+public class AndroidEmuCat {
+
+	public static AndroidDriver<MobileElement> driver;
 
 	@BeforeClass
-	public void setup() throws MalformedURLException, Throwable {
+	public static void setup() throws Exception {
+
+
+		// Below are device capabilities
 		DesiredCapabilities caps = new DesiredCapabilities();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		caps.setCapability("browserstack.user", "kenmaccormick1");
-		caps.setCapability("browserstack.key", "kR58js3CZxgwgKHyxraB");
-//		caps.setCapability("device", "Google Pixel 3");
-//		caps.setCapability("os_version", "9.0");
-
-		// Specify device and os_version for testing
-		caps.setCapability("device", "Samsung Galaxy Note 20");
-		caps.setCapability("os_version", "10.0");
-
-		// caps.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
-		caps.setCapability("project", "First Java Project");
-		caps.setCapability("build", "Java Android");
-		caps.setCapability("name", "first_test");
+		// caps.setCapability("app", "D:\\WWF Words with Friends
+		// Helper_v4_apkpure.com.apk");
+		caps.setCapability("platformName", "Android");
+		caps.setCapability("platformVersion", "8.0.0");
+		caps.setCapability("deviceName", "emulator-5554");
+		caps.setCapability("browserName", "chrome");
+		caps.setCapability("chromedriverExecutable", "D:\\appium_browserstack-master\\driver\\chromedriver.exe");
+//		caps.setCapability("appPackage", "com.android.chrome");
+//		caps.setCapability("appActivity", "org.chromium.chrome.browser.ChromeTabbedActivity t7}}}");
 		caps.setCapability("automationName", "UiAutomator2");
-		driver = new AndroidDriver<AndroidElement>(new URL("http://hub.browserstack.com/wd/hub"), caps);
+//		driver = new AndroidDriver<>(new URL(appiumServiceUrl), caps);
+		driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//		 wait = new WebDriverWait(driver, 10);
+
 	}
 
 	@Test
@@ -95,20 +86,20 @@ public class BrowserCat {
 		Thread.sleep(3000);
 		System.out.println("****************Scrolled down starts****************");
 		Thread.sleep(3000);
-		for(int i=0;i<8;i++) {
+		for (int i = 0; i < 8; i++) {
 			JavascriptExecutor jaa = (JavascriptExecutor) driver;
 			jaa.executeScript("window.scrollBy(0,350)", "");
 			Thread.sleep(500);
-			System.out.println("Scrolled time: "+i);
+			System.out.println("Scrolled time: " + i);
 		}
 		System.out.println("****************Scrolled down end****************");
-		
+
 		System.out.println("****************Scrolled up starts****************");
-		for(int i=0;i<8;i++) {
+		for (int i = 0; i < 8; i++) {
 			JavascriptExecutor jab = (JavascriptExecutor) driver;
 			jab.executeScript("window.scrollBy(0,-350)", "");
 			Thread.sleep(500);
-			System.out.println("Scrolled time: -"+i);
+			System.out.println("Scrolled time: -" + i);
 		}
 		System.out.println("****************Scrolled up end****************");
 
@@ -117,7 +108,8 @@ public class BrowserCat {
 		Thread.sleep(5000);
 
 		System.out.println("clicking on Add to cart button");
-		// WebElement buyNowBtn = driver.findElement(By.xpath("//input[@value='Buy Now']"));
+		// WebElement buyNowBtn = driver.findElement(By.xpath("//input[@value='Buy
+		// Now']"));
 		WebElement addToCartBtn = driver.findElement(By.xpath("//input[@value='Add to Cart']"));
 		addToCartBtn.isDisplayed();
 		addToCartBtn.click();
@@ -248,10 +240,11 @@ public class BrowserCat {
 	}
 
 	@AfterClass
-	public void teardown() {
-		System.out.println("Execution completed successfully");
-
+	public void tearDown() {
+		// System.out.println("Stop driver");
 		driver.quit();
+		// System.out.println("Stop appium service");
+		// appiumService.stop();
+		System.out.println("Closing and uninstalling the application");
 	}
-
 }
