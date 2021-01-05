@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.base.AndroidEmuCat">
+      <class name="com.qa.base.AutomaticLittleProduct">
         <methods>
           <include name="buyProduct"/>
-          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.base.AndroidEmuCat -->
+      </class> <!-- com.qa.base.AutomaticLittleProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
