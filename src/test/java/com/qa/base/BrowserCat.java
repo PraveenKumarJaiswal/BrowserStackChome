@@ -75,6 +75,7 @@ public class BrowserCat {
 			Thread.sleep(500);
 			System.out.println("Scrolled time: -" + i);
 		}
+		
 		System.out.println("****************Scrolled up end****************");
 
 		Thread.sleep(3000);
@@ -113,11 +114,28 @@ public class BrowserCat {
 		System.out.println("****************Scrolled up end****************");
 
 		Select selectColor = new Select(driver.findElement(By.id("input-option240")));
-		selectColor.selectByVisibleText("Grey (SKU: LR3C-1200 )");
+		selectColor.selectByVisibleText("Bisque (SKU: LR3C-1000 )");
 		Thread.sleep(5000);
-
+		
+		WebElement ddTitle = driver.findElement(By.xpath("//*[contains(text(),'Connect_colour')]"));
+		ddTitle.isDisplayed();
+		ddTitle.isEnabled();
+		ddTitle.click();
+		Thread.sleep(5000);
+		
+		Select selectColorgrey = new Select(driver.findElement(By.id("input-option240")));
+		selectColorgrey.selectByVisibleText("Grey (SKU: LR3C-1200 )");
+		Thread.sleep(1000);
+		WebElement ddTitle1 = driver.findElement(By.xpath("//*[contains(text(),'Connect_colour')]"));
+		ddTitle1.isDisplayed();
+		ddTitle1.isEnabled();
+		ddTitle1.click();
+		Thread.sleep(5000);
+		
+		System.out.println("Waiting for buy now button to appear");
+		Thread.sleep(5000);
 		System.out.println("clicking on Add to cart button");
-		// WebElement buyNowBtn = driver.findElement(By.xpath("//input[@value='Buy Now']"));
+		//WebElement buyNowBtn = driver.findElement(By.xpath("//input[@value='Buy Now']"));
 		WebElement addToCartBtn = driver.findElement(By.xpath("//input[@value='Add to Cart']"));
 		addToCartBtn.isDisplayed();
 		addToCartBtn.click();

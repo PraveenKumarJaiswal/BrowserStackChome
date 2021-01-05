@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="99868" started-at="2021-01-02T07:56:16Z" finished-at="2021-01-02T07:57:55Z">
+  <suite name="Default suite" duration-ms="114495" started-at="2021-01-04T06:52:38Z" finished-at="2021-01-04T06:54:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="99868" started-at="2021-01-02T07:56:16Z" finished-at="2021-01-02T07:57:55Z">
+    <test name="Default test" duration-ms="114495" started-at="2021-01-04T06:52:38Z" finished-at="2021-01-04T06:54:33Z">
       <class name="com.qa.base.AndroidEmuCat">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.base.AndroidEmuCat@6500df86]" name="setup" is-config="true" duration-ms="26870" started-at="2021-01-02T07:56:16Z" finished-at="2021-01-02T07:56:42Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.base.AndroidEmuCat@6500df86]" name="setup" is-config="true" duration-ms="68578" started-at="2021-01-04T06:52:38Z" finished-at="2021-01-04T06:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="buyProduct()[pri:0, instance:com.qa.base.AndroidEmuCat@6500df86]" name="buyProduct" duration-ms="71785" started-at="2021-01-02T07:56:42Z" finished-at="2021-01-02T07:57:54Z">
+        <test-method status="FAIL" signature="buyProduct()[pri:0, instance:com.qa.base.AndroidEmuCat@6500df86]" name="buyProduct" duration-ms="45822" started-at="2021-01-04T06:53:47Z" finished-at="2021-01-04T06:54:32Z">
           <exception class="org.openqa.selenium.InvalidArgumentException">
             <message>
               <![CDATA[invalid argument: invalid locator
@@ -20,7 +20,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'DESKTOP-94SR29E', ip: '192.168.0.51', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: D:\appium_browserstack-mast..., databaseEnabled: false, desired: {automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: D:\appium_browserstack-mast..., deviceName: emulator-5554, platformName: android, platformVersion: 8.0.0}, deviceApiLevel: 26, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2220, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: b34d36ff-e88d-437b-8b80-288678261cde
+Session ID: 784c7255-4c30-4378-9777-6518b3f4f339
 *** Element info: {Using=id, value=input-option240}]]>
             </message>
             <full-stacktrace>
@@ -30,7 +30,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'DESKTOP-94SR29E', ip: '192.168.0.51', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: D:\appium_browserstack-mast..., databaseEnabled: false, desired: {automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: D:\appium_browserstack-mast..., deviceName: emulator-5554, platformName: android, platformVersion: 8.0.0}, deviceApiLevel: 26, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2220, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: b34d36ff-e88d-437b-8b80-288678261cde
+Session ID: 784c7255-4c30-4378-9777-6518b3f4f339
 *** Element info: {Using=id, value=input-option240}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -58,7 +58,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
 at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.qa.base.AndroidEmuCat.buyProduct(AndroidEmuCat.java:106)
+at com.qa.base.AndroidEmuCat.buyProduct(AndroidEmuCat.java:122)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -90,7 +90,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buyProduct -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.base.AndroidEmuCat@6500df86]" name="tearDown" is-config="true" duration-ms="1164" started-at="2021-01-02T07:57:54Z" finished-at="2021-01-02T07:57:55Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.base.AndroidEmuCat@6500df86]" name="tearDown" is-config="true" duration-ms="2" started-at="2021-01-04T06:54:33Z" finished-at="2021-01-04T06:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

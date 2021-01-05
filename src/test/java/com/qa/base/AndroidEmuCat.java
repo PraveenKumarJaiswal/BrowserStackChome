@@ -11,8 +11,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class AndroidEmuCat {
 
@@ -49,23 +52,24 @@ public class AndroidEmuCat {
 		Thread.sleep(3000);
 		System.out.println("Url is launched");
 
-		System.out.println("****************Scrolled down starts****************");
-		Thread.sleep(3000);
-		for (int i = 0; i < 12; i++) {
-			JavascriptExecutor ja = (JavascriptExecutor) driver;
-			ja.executeScript("window.scrollBy(0,350)", "");
-			Thread.sleep(500);
-			System.out.println("Scrolled time: " + i);
-		}
-		System.out.println("****************Scrolled down end****************");
-
-		System.out.println("****************Scrolled up starts****************");
-		for (int i = 0; i < 12; i++) {
-			JavascriptExecutor jb = (JavascriptExecutor) driver;
-			jb.executeScript("window.scrollBy(0,-350)", "");
-			Thread.sleep(500);
-			System.out.println("Scrolled time: -" + i);
-		}
+//		System.out.println("****************Scrolled down starts****************");
+//		Thread.sleep(3000);
+//		for (int i = 0; i < 12; i++) {
+//			JavascriptExecutor ja = (JavascriptExecutor) driver;
+//			ja.executeScript("window.scrollBy(0,350)", "");
+//			Thread.sleep(500);
+//			System.out.println("Scrolled time: " + i);
+//		}
+//		System.out.println("****************Scrolled down end****************");
+//
+//		System.out.println("****************Scrolled up starts****************");
+//		for (int i = 0; i < 12; i++) {
+//			JavascriptExecutor jb = (JavascriptExecutor) driver;
+//			jb.executeScript("window.scrollBy(0,-350)", "");
+//			Thread.sleep(500);
+//			System.out.println("Scrolled time: -" + i);
+//		}
+		
 		System.out.println("****************Scrolled up end****************");
 
 		Thread.sleep(3000);
@@ -85,27 +89,38 @@ public class AndroidEmuCat {
 		System.out.println("Write review is enable and displayed.");
 		Thread.sleep(3000);
 		System.out.println("****************Scrolled down starts****************");
-		Thread.sleep(3000);
-		for (int i = 0; i < 8; i++) {
-			JavascriptExecutor jaa = (JavascriptExecutor) driver;
-			jaa.executeScript("window.scrollBy(0,350)", "");
-			Thread.sleep(500);
-			System.out.println("Scrolled time: " + i);
-		}
-		System.out.println("****************Scrolled down end****************");
-
-		System.out.println("****************Scrolled up starts****************");
-		for (int i = 0; i < 8; i++) {
-			JavascriptExecutor jab = (JavascriptExecutor) driver;
-			jab.executeScript("window.scrollBy(0,-350)", "");
-			Thread.sleep(500);
-			System.out.println("Scrolled time: -" + i);
-		}
-		System.out.println("****************Scrolled up end****************");
-
+//		Thread.sleep(3000);
+//		for (int i = 0; i < 8; i++) {
+//			JavascriptExecutor jaa = (JavascriptExecutor) driver;
+//			jaa.executeScript("window.scrollBy(0,350)", "");
+//			Thread.sleep(500);
+//			System.out.println("Scrolled time: " + i);
+//		}
+//		System.out.println("****************Scrolled down end****************");
+//
+//		System.out.println("****************Scrolled up starts****************");
+//		for (int i = 0; i < 8; i++) {
+//			JavascriptExecutor jab = (JavascriptExecutor) driver;
+//			jab.executeScript("window.scrollBy(0,-350)", "");
+//			Thread.sleep(500);
+//			System.out.println("Scrolled time: -" + i);
+//		}
+//		System.out.println("****************Scrolled up end****************");
+		
+		Thread.sleep(5000);
+		
+		
 		Select selectColor = new Select(driver.findElement(By.id("input-option240")));
 		selectColor.selectByVisibleText("Grey (SKU: LR3C-1200 )");
 		Thread.sleep(5000);
+		
+		Select selectColor1 = new Select(driver.findElement(By.id("input-option240")));
+		selectColor1.selectByVisibleText("Bisque (SKU: LR3C-1000 )");
+		Thread.sleep(1000);
+		
+		Select selectColor2 = new Select(driver.findElement(By.id("input-option240")));
+		selectColor2.selectByVisibleText("Grey (SKU: LR3C-1200 )");
+		Thread.sleep(1000);
 
 		System.out.println("clicking on Add to cart button");
 		// WebElement buyNowBtn = driver.findElement(By.xpath("//input[@value='Buy
@@ -242,7 +257,7 @@ public class AndroidEmuCat {
 	@AfterClass
 	public void tearDown() {
 		// System.out.println("Stop driver");
-		driver.quit();
+		//driver.quit();
 		// System.out.println("Stop appium service");
 		// appiumService.stop();
 		System.out.println("Closing and uninstalling the application");
